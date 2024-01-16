@@ -1,16 +1,17 @@
-import { cn } from "@/lib/utils";
+import { cn } from "./lib/utils";
 
 type IconSize = {
   width?: number;
   height?: number;
 };
 
-const LogoIcon = ({ width = 42, height = 42 }) => {
+const LogoIcon = ({ width = 42, height = 42 }: IconSize) => {
   return (
     <img
       src="../images/Vektor.png"
       width={width}
       height={height}
+      alt="Logo"
     />
   );
 };
@@ -20,8 +21,8 @@ const Logo = ({ dark = false }) => (
     <LogoIcon />
     <span
       className={cn(
-        "font-roboto font-bold text-3xl whitespace-nowrap text-red-500", // Dodali smo klasu za crvenu boju
-        { "text-red-500": !dark, "text-gray-800": dark } // Postavljamo boje teksta ovisno o temi
+        "font-roboto font-bold text-3xl whitespace-nowrap text-red-500",
+        { "text-red-500": !dark, "text-gray-800": dark }
       )}
     >
       CityScape Station

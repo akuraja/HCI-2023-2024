@@ -1,6 +1,6 @@
 import { ReactNode, MouseEvent } from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import { cn } from "@/lib/utils";
+import { cn } from "./lib/utils";
 
 type ButtonProps = {
   children: ReactNode;
