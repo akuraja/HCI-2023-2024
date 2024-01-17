@@ -17,9 +17,6 @@ const Button = ({
   className,
   iconClassName,
   onClick,
-  orange,
-  red,
-  purple,
 }: ButtonProps) => {
   const buttonClasses = cn(
     "transition duration-300 ease-in-out",
@@ -28,21 +25,13 @@ const Button = ({
     className
   );
 
-  const colorStyles = red
-    ? {
-        backgroundColor: "#EF4444", // Red color
-        hoverBackgroundColor: "#DC2626", // Darker red for hover
-        textColor: "#F9FAFB", // White text
-        hoverTextColor: "#F9FAFB", // White text on hover
-        borderColor: "#EF4444", // Red border
-      }
-    : {
-        backgroundColor: "#9F5CC0", // Purple color
-        hoverBackgroundColor: "#7C3A95", // Darker purple for hover
-        textColor: "#1F2937", // Dark text
-        hoverTextColor: "#F9FAFB", // White text on hover
-        borderColor: "#9F5CC0", // Purple border
-      };
+  const colorStyles = {
+    backgroundColor: "rgba(0, 123, 255, 0.8)", // Light blue color
+    hoverBackgroundColor: "rgba(0, 123, 255, 1)", // Darker blue for hover
+    textColor: "#FFFFFF", // White text
+    hoverTextColor: "#FFFFFF", // White text on hover
+    borderColor: "rgba(0, 123, 255, 0.8)", // Light blue border
+  };
 
   return (
     <button

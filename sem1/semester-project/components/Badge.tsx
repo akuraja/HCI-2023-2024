@@ -20,7 +20,7 @@ const Badges = {
   design: () => (
     <Badge
       text="Design"
-      bgColor="bg-red-500" // Crvena pozadina
+      bgColor="rgba(0, 123, 255, 1)" // Crvena pozadina
       textColor="text-black" // Crna boja teksta
     />
   ),
@@ -34,14 +34,14 @@ const Badges = {
   branding: () => (
     <Badge
       text="Branding"
-      bgColor="bg-red-700" // Tamnocrvena pozadina
+      bgColor="rgba(0, 123, 255, 1)" // Tamnocrvena pozadina
       textColor="text-black" // Crna boja teksta
     />
   ),
   paper: () => (
     <Badge
       text="Paper"
-      bgColor="bg-red-800" // Tamnocrvena pozadina
+      bgColor="rgba(0, 123, 255, 1)" // Tamnocrvena pozadina
       textColor="text-black" // Crna boja teksta
     />
   ),

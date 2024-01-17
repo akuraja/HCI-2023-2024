@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 import image from "@/images/image 4.png"
 
 const CtaSection = () => (
-  <div className="bg-gray-200 w-full"> {/* Promijenjena pozadinska boja u svijetlo sivu */}
+  <div className="bg-white w-full"> {/* Promijenjena pozadinska boja u svijetlo sivu */}
     <section className="pb-8 lg:container flex flex-wrap justify-center items-center gap-10 w-full ">
       <div className="relative h-96 w-full lg:h-80 lg:w-80 brightness-125 saturate-50">
         <Image

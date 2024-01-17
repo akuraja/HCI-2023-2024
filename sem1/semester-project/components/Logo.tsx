@@ -1,4 +1,5 @@
 import { cn } from "./lib/utils";
+import Image from "next/image";
 
 type IconSize = {
   width?: number;
@@ -7,7 +8,7 @@ type IconSize = {
 
 const LogoIcon = ({ width = 40, height = 40 }: IconSize) => {
   return (
-    <img src="./images/Vector.png" width={width} height={height} alt="Logo" />
+    <Image src="/images/Vector.png" width={width} height={height} alt="Logo" />
   );
 };
 
@@ -16,8 +17,10 @@ const Logo = ({ dark = false }) => (
     <LogoIcon />
     <span
       className={cn(
-        "font-roboto font-bold text-3xl whitespace-nowrap text-red-500",
-        { "text-red-500": !dark, "text-gray-800": dark }
+        "font-roboto font-bold text-3xl whitespace-nowrap text-lightblue-500", // Promijenjena boja u svijetloplavu
+        {
+          "text-lighblue-500": dark, // Tamnoplava boja za tamno
+        }
       )}
     >
       CityScape Station

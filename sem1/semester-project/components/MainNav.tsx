@@ -8,7 +8,7 @@ import { Page } from "@/components/Navbar";
 const MainNav = ({ pages }: { pages: Page[] }) => {
   const pathname = usePathname();
   return (
-    <nav className="hidden lg:flex items-center justify-center p-4 ">
+    <nav className="hidden lg:flex items-center justify-center p-4">
       <ul className="flex gap-2">
         {pages.map(({ href, title }) => (
           <li key={href}>
@@ -17,8 +17,8 @@ const MainNav = ({ pages }: { pages: Page[] }) => {
                 className={cn(
                   "uppercase whitespace-nowrap font-roboto-condensed text-base px-5 py-3 rounded-sm transition duration-300",
                   {
-                    "bg-red-500 text-white": pathname === href,
-                    "bg-red-500 text-white hover:bg-red-700": pathname !== href,
+                    "bg-blue-500 text-white": pathname === href, // Svijetloplava boja za aktivnu stranicu
+                    "bg-blue-500 text-white hover:bg-blue-700": pathname !== href, // Tamnija svijetloplava boja za hover
                   }
                 )}
               >

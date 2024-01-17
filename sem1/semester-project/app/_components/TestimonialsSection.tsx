@@ -2,10 +2,11 @@ import Badges from "@/components/Badge";
 import Button from "@/components/Button";
 import TestimonialCard, { TestimonialCardProps } from "./TestimonialCard";
 
-import testimonial1 from "@/images/bus.png";
-import testimonial2 from "@/public/testimonials/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg";
-import testimonial3 from "@/public/testimonials/slidebean-TY3pj5q72tw-unsplash.jpg";
-import testimonial4 from "@/public/testimonials/kelly-sikkema-sX_OIy4_HF8-unsplash.jpg";
+import testimonial1 from "@/images/maps.png";
+import testimonial2 from "@/images/index.jpg";
+import testimonial3 from "@/images/park-suma-marjan-croatia_l.jpeg";
+
+// TestimonialsSection component
 
 const testimonials: TestimonialCardProps[] = [
   {
@@ -13,23 +14,34 @@ const testimonials: TestimonialCardProps[] = [
     title: "Odaberi destinaciju",
     body: "Svoju destinaciju možeš upisati ručno ili ju pak potražiti među ponuđenim lokacijama.",
     badge: <Badges.design />,
+    link: "/usluge/destination1", // Add link for the first card
+  },
+  {
+    image: testimonial2,
+    title: "Atrakcije",
+    body: "Tekst za drugi testimonial.",
+    badge: <Badges.design />,
+    link: "/usluge/destination2", // Add link for the second card
+  },
+  {
+    image: testimonial3,
+    title: "Aktivnosti",
+    body: "Tekst za treći testimonial.",
+    badge: <Badges.design />,
+    link: "/usluge/destination3", // Add link for the third card
   },
 ];
 
+// TestimonialsSection.jsx
+
 const TestimonialsSection = () => (
-  <section className="container flex flex-col items-center justify-center gap-5 lg:gap-20 h-screen">
-    <div className="text-center mb-2"> {/* Dodali smo margin-bottom */}
-      <h1 className="hidden sm:block font-roboto-condensed text-3xl font-extrabold">
-        Lak pronalazak tražene destinacije
-      </h1>
-    </div>
-    <div className="flex flex-col items-center gap-5">
-      {testimonials.map((testimonial) => (
-        <TestimonialCard key={testimonial.title} {...testimonial} />
-      ))}
-    </div>
+  <section className="flex overflow-x-auto p-4">
+    {testimonials.map((testimonial, index) => (
+      <TestimonialCard key={index} {...testimonial} />
+    ))}
   </section>
 );
+
 
 
 
