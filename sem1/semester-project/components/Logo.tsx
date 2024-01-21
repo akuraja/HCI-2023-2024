@@ -6,20 +6,20 @@ type IconSize = {
   height?: number;
 };
 
-const LogoIcon = ({ width = 40, height = 40 }: IconSize) => {
+const LogoIcon = ({ width = 50, height = 50 }: IconSize) => {
   return (
-    <Image src="/images/Vector.png" width={width} height={height} alt="Logo" />
+    <Image src="/images/logo1.png" width={width} height={height} alt="Logo" />
   );
 };
 
 const Logo = ({ dark = false }) => (
-  <div className="flex items-center justify-between max-w-min gap-2">
+  <div className="flex items-center gap-2"> {/* Uklonjeno justify-start */}
     <LogoIcon />
     <span
       className={cn(
         "font-roboto font-bold text-3xl whitespace-nowrap text-lightblue-500", // Promijenjena boja u svijetloplavu
         {
-          "text-lighblue-500": dark, // Tamnoplava boja za tamno
+          "text-lightblue-500": dark, // Tamnoplava boja za tamno
         }
       )}
     >

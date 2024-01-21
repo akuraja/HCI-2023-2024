@@ -14,9 +14,9 @@ export type Page = {
 // Get this info from some external source (e.g. CMS)
 const pages: Page[] = [
   { href: "/", title: "Home" },
-  { href: "/onama", title: "O nama" },
   { href: "/usluge", title: "Usluge" },
-  { href: "/upute", title: "Upute" },
+  { href: "/recenzije", title: "Recenzije i osvrti"},
+  { href: "/onama", title: "O nama" },
   { href: "/kontaktirajnas", title: "Kontaktiraj nas" },
 ];
 
