@@ -38,11 +38,8 @@ const Footer = () => (
           <FooterList
             title="Usluge"
             items={[
-              "Prodaja karata",
-              "Informacije o rasporedu",
-              "Sigurnost",
-              "Pomoć",
-              "Upravljanje rezervacijom",
+              "Atrakcije",
+              "Aktivnosti",
             ]}
           />
         </div>
@@ -52,7 +49,7 @@ const Footer = () => (
             title="CityScape station"
             items={[
               "O nama",
-              "Kontaktiraj nas",
+              "Recenzije i osvrti",
               "Usluge",
             ]}
           />
