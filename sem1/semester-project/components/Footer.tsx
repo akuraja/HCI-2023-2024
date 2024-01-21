@@ -59,13 +59,13 @@ const Footer = () => (
         </div>
 
         <div className="flex flex-col gap-2">
-          <FooterListTitle>Pronađi nas na društvenim mrežama</FooterListTitle>
+          <FooterListTitle>Kontaktiraj nas!</FooterListTitle>
     
           <div className="flex gap-2">
-            <Icons.facebook className="w-6" />
-            <Icons.twitter className="w-6" />
-            <Icons.linked className="w-6" />
-            <Icons.instagram className="w-6" />
+             <Icons.facebook className="w-6" style={{ color: '#001f3f' }} />
+            <Icons.twitter className="w-6" style={{ color: '#001f3f' }} />
+            <Icons.linked className="w-6" style={{ color: '#001f3f' }} />
+            <Icons.instagram className="w-6" style={{ color: '#001f3f' }} />
           </div>
         </div>
       </div>
