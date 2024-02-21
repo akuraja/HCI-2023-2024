@@ -21,7 +21,7 @@ const testimonials: TestimonialCardProps[] = [
     title: "Kamo za vikend?",
     body: "Niste sigurni što želite posjetiti? Na pravom ste mjestu!",
     badge: <Badges.design />,
-    link: "/usluge/destination 1", // Add link for the second card
+    link: "/usluge", // Add link for the second card
   },
   {
     image: testimonial3,
