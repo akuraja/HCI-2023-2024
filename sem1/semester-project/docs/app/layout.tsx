@@ -30,7 +30,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: {
     template: "CitySpacey | %s",
-    default: "CitySpace Station",
+    default: "CityScape Station",
   },
   description: "Next.js lab project",
 };

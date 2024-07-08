@@ -11,7 +11,7 @@ const NotFoundPage = () => {
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
           <h1 className="lg:text-[96px] font-bold">404</h1>
-          <p className="text-xl mt-4">Page not found</p>
+          <p className="text-xl mt-4">See you soon</p>
         </div>
       </div>
     </div>
