@@ -5,7 +5,7 @@ import Link from "next/link";
 import Logo from "@/components/Logo";
 import MobileNav from "./MobileNav";
 import MobileNavHelp from "./MobileNavHelp";
-import './NavBar.css';
+import './Navbar.css';
 
 export type Page = {
   href: string;
