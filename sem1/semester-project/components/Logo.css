@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.logo-text {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 1rem; 
+  white-space: nowrap;
+  color: #09396d; 
+}
+.logo-text-small{
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 1rem; 
+  white-space: nowrap;
+  color: #09396d; 
+
+}
+.dark-text {
+  color: #5d87b1; 
+}

@@ -1,0 +1,52 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./app/_components/styles.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/* styles.module.css */
+
+.styles_container__XegU9 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.styles_backgroundImage__763D_ {
+  width: 100%;
+  height: 100%;
+}
+
+.styles_overlay__z7nrP {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Prilagodite ovo prema vašim potrebama */
+}
+
+.styles_content__ydas5 {
+  font-family: 'Merriweather', serif; /* Promijenjen font */
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.styles_title__5CRZ4 {
+  font-size: 5rem;
+  color:#f2f4fe 
+}
+
+.styles_linkButton__anAFP {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: light;
+  background-color: #f2f4fe ;
+  color: #09396d;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
