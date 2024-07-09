@@ -67,13 +67,14 @@ const Usluge: NextPage = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {filteredData.map((item, index) => (
-
           <div key={index} className="p-4 m-4 bg-white rounded-md h-full">
             <p className="text-[#09396d] font-bold uppercase text-2xl mb-2">{item.fields.name}</p>
             <img src={item.fields.img} alt={item.fields.name} className="w-full h-40 object-cover mb-2" />
             <p className="text-[#09396d] text-sm">{item.fields.body}</p>
             <Link href={`/pages/usluge/${item.fields.id}`}>
-              <div className="text-[#09396d] uppercase font-bold cursor-pointer">Pročitaj više</div>
+              <div className="text-[#09396d] uppercase font-bold cursor-pointer mt-4"> {/* Added margin-top here */}
+                Pročitaj više
+              </div>
             </Link>
           </div>
         ))}
@@ -83,4 +84,3 @@ const Usluge: NextPage = () => {
 };
 
 export default Usluge;
-
