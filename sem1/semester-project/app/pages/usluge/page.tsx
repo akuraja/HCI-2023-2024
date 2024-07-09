@@ -73,7 +73,7 @@ const Usluge: NextPage = () => {
             <img src={item.fields.img} alt={item.fields.name} className="w-full h-40 object-cover mb-2" />
             <p className="text-[#09396d] text-sm">{item.fields.body}</p>
             <Link href={`/pages/usluge/${item.fields.id}`}>
-              <div className="text-[#09396d] uppercase font-bold cursor-pointer">Pročitaj više</div>
+              <div className="text-[#09396d] uppercase font-bold cursor-pointer mt-4">Pročitaj više</div>
             </Link>
           </div>
         ))}
@@ -83,4 +83,3 @@ const Usluge: NextPage = () => {
 };
 
 export default Usluge;
-

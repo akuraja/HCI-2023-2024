@@ -4,8 +4,6 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import { BadgeNode } from "@/components/Badge";
-import { useEffect, useState } from "react";
-import fetchData from "../api";
 
 export type TestimonialCardProps = {
   image: StaticImageData;
@@ -30,7 +28,6 @@ const TestimonialCard = ({
       ? `${body.slice(0, MAX_BODY_CHARACTERS)}...`
       : body;
 
-
   return (
     <div className="flex-shrink-0 w-64 mx-4 bg-gray-250 shadow-lg rounded-lg overflow-hidden">
       <div className="relative h-48">
@@ -49,7 +46,7 @@ const TestimonialCard = ({
             {truncatedBody}
           </p>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mt-4"> {/* Added margin-top here */}
           <Link href={link} passHref>
             <Button className="text-sm px-4 py-2 text-[#09396d]" iconClassName="w-3 h-3">
               Pročitaj više
@@ -57,7 +54,7 @@ const TestimonialCard = ({
           </Link>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 
