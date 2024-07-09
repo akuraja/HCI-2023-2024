@@ -1,85 +1,61 @@
-// pages/usluge.tsx
+// TestimonialCard.jsx
 "use client"
-import { NextPage } from "next";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTicketAlt, faInfo, faClipboardList, faHandsHelping } from "@fortawesome/free-solid-svg-icons";
-import React, { useEffect, useState } from "react";
-import fetchData from '../api/index';
+import Button from "@/components/Button";
+import { BadgeNode } from "@/components/Badge";
 
-type ServiceItemProps = {
+export type TestimonialCardProps = {
+  image: StaticImageData;
   title: string;
-  icon: import("@fortawesome/fontawesome-svg-core").IconDefinition;
-  href: string;
+  body: string;
+  badge: BadgeNode;
+  link: string;
 };
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ title, icon, href }) => (
-  <Link href={href}>
-    <div className="flex items-center p-4 bg-gray-200 rounded-md cursor-pointer">
-      <FontAwesomeIcon icon={icon} className="text-red-500 mr-2" />
-      <span className="text-gray-800 uppercase font-bold">{title}</span>
-    </div>
-  </Link>
-);
+const MAX_BODY_CHARACTERS = 60;
 
-const Usluge: NextPage = () => {
-  const [data, setData] = useState<any[]>([]);
-  const [filteredData, setFilteredData] = useState<any[]>([]);
-  const [filterType, setFilterType] = useState('');
-
-  useEffect(() => {
-    const fetchDataAsync = async () => {
-      try {
-        const fetchedData = await fetchData('usluge1');
-        setData(fetchedData);
-        setFilteredData(fetchedData);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchDataAsync();
-  }, []);
-
-  const handleFilter = (type: string) => {
-    let filtered: any[] = [];
-  
-    if (filterType === type) {
-      setFilterType('');
-      setFilteredData(data);
-    } else {
-      setFilterType(type);
-      if (type === 'znamenitosti') {
-        filtered = data.filter((item: any) => item.fields.name === 'Stadion Poljud' || item.fields.name === 'Hrvatsko narodno kazalište Split' || item.fields.name === 'Galerija umjetnina Split' || item.fields.name === 'Dioklecijanova palača');
-      } else if (type === 'aktivnosti') {
-        filtered = data.filter((item: any) => item.fields.name === 'Karting arena' || item.fields.name === 'Park šuma Marjan');
-      }
-      setFilteredData(filtered);
-    }
-  };
-  
+const TestimonialCard = ({
+  image,
+  title,
+  body,
+  badge,
+  link,
+}: TestimonialCardProps) => {
+  // Ograniči broj karaktera u body-ju na 60
+  const truncatedBody =
+    body.length > MAX_BODY_CHARACTERS
+      ? `${body.slice(0, MAX_BODY_CHARACTERS)}...`
+      : body;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-10">
-      <div className="mb-4">
-        <button onClick={() => handleFilter('znamenitosti')} className={`mr-2 border border-gray-700 rounded-md p-2 ${filterType === 'znamenitosti' ? 'bg-gray-700 text-white' : ''}`}>Znamenitosti</button>
-        <button onClick={() => handleFilter('aktivnosti')} className={`border border-gray-700 rounded-md p-2 ${filterType === 'aktivnosti' ? 'bg-gray-700 text-white' : ''}`}>Aktivnosti</button>
+    <div className="flex-shrink-0 w-64 mx-4 bg-gray-250 shadow-lg rounded-lg overflow-hidden">
+      <div className="relative h-48">
+        <Image
+          className="w-full h-full object-cover object-center"
+          src={image}
+          alt="Card header"
+        />
       </div>
-      <div className="grid grid-cols-3 gap-4">
-        {filteredData.map((item, index) => (
-          <div key={index} className="p-4 bg-gray-200 rounded-md relative">
-            <p className="text-gray-700 font-bold uppercase text-2xl mb-2">{item.fields.name}</p>
-            <img src={item.fields.img} alt={item.fields.name} className="w-full h-40 object-cover mb-2" />
-            <p className="text-black text-sm">{item.fields.body}</p>
-            <Link href={`/details/${index}`}>
-              <div className="absolute bottom-2 right-2 text-gray-700 uppercase font-bold cursor-pointer">Pročitaj više</div>
-            </Link>
-          </div>
-        ))}
+      <div className="flex flex-col justify-between px-6 py-4 h-52">
+        <div className="mb-8">
+          <h2 className="text-2xl font-roboto-condensed font-bold text-[#09396d]">
+            {title}
+          </h2>
+          <p className="font-roboto text-brand-gray-500 leading-6">
+            {truncatedBody}
+          </p>
+        </div>
+        <div className="flex justify-between items-center mt-4"> {/* Added margin-top here */}
+          <Link href={link} passHref>
+            <Button className="text-sm px-4 py-2 text-[#09396d]" iconClassName="w-3 h-3">
+              Pročitaj više
+            </Button>
+          </Link>
+        </div>
       </div>
-    </main>
+    </div>
   );
 };
 
-export default Usluge;
-
+export default TestimonialCard;

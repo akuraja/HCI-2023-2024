@@ -43,7 +43,7 @@ const Footer = () => (
         <FooterList
           title="Usluge"
           items={[
-            { label: "Atrakcije", href: "/pages/usluge" },
+            { label: "Znamenitosti", href: "/pages/usluge" },
             { label: "Aktivnosti", href: "/pages/usluge" },
           ]}
         />
